@@ -36,7 +36,7 @@
         <td><%= customer.Fax %></td>
         <td><%= customer.Email %></td>
         <td><%= customer.SupportRepId %></td>
-        <td><%= link_to 'Show Invoices', customer %></td>
+        <td><%= link_to 'Show Invoices', customer_invoices_path(customer) %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Invoice ID</th>
+      <th>Customer ID</th>
+      <th>Invoice Date</th>
+      <th>Billing Address</th>
+      <th>Billing City</th>
+      <th>Billing State</th>
+      <th>Billing Country</th>
+      <th>Billing Postal Code</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.InvoiceId %></td>
+        <td><%= invoice.CustomerId %></td>
+        <td><%= invoice.InvoiceDate %></td>
+        <td><%= invoice.BillingAddress %></td>
+        <td><%= invoice.BillingCity %></td>
+        <td><%= invoice.BillingState %></td>
+        <td><%= invoice.BillingCountry %></td>
+        <td><%= invoice.BillingPostalCode %></td>
+        <td><%= invoice.Total %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
