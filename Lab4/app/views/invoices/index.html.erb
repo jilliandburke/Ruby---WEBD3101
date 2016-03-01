@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Invoices</h1>
+<h1>Listing Invoices <%= @customer.FirstName%> <%= @customer.LastName%></h1>
 
-<table>
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Invoice ID</th>
@@ -14,7 +14,6 @@
       <th>Billing Country</th>
       <th>Billing Postal Code</th>
       <th>Total</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -34,5 +33,12 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @customers %>
+  </div>
+  <%= will_paginate @customers, :container => false %>
+</div>
 
 <br>
